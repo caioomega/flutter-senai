@@ -6,18 +6,19 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text(
-            'Oi',
-            style: TextStyle(fontSize: 30),
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/logo.png"),
+              fit: BoxFit.contain
+            )
           ),
         ),
-      ),
+      )
     );
   }
 }
